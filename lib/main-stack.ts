@@ -14,7 +14,7 @@ export class MainStack extends cdk.Stack {
         super(scope, stageName, {...props});
 
         const bucket = new s3.Bucket(this, 'FrontendBucket', {
-            bucketName:  `${options.bucketName}-${stageName}`
+            bucketName:  `${options.bucketName}-${props.stageEnvironment.toLocaleLowerCase()}`
         });
     }
 }

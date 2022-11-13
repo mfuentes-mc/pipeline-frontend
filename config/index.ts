@@ -12,7 +12,7 @@ export enum Environment{
 }
 
 export const options:Options={
-    bucketName: "hello-world-pipeline-frontend",
+    bucketName: "hello-world-frontend-mfuentes",
     account: "108072982334",
     defaultRegion: "us-west-2",
     rootAccount: "mfuentes-mc",
