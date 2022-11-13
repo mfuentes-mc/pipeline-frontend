@@ -6,8 +6,6 @@ let stackPrefix = "main";
 
 export enum Environment{
     DEV= 'DEV',
-    QA='QA',
-    STAGING='STAGING',
     PROD='PROD'
 }
 
@@ -23,14 +21,6 @@ export const options:Options={
     stageOptions: [
         {
             environment: Environment.DEV,
-            account:'108072982334'
-        },
-        {
-            environment: Environment.QA,
-            account:'108072982334'
-        },
-        {
-            environment: Environment.STAGING,
             account:'108072982334'
         },
         {
