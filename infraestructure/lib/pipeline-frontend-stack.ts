@@ -21,11 +21,11 @@ export class PipelineFrontendStack extends cdk.Stack {
       synth: new ShellStep('Synth',{
         input: CodePipelineSource.gitHub(`${props?.options.rootAccount}/${props?.options.reposName}`,'main'),
         commands: [
+          'npm run build',
           'cd infraestructure',
           'npm ci',
           'npm run build',
           'npx cdk synth',
-          'ls'
         ],
         primaryOutputDirectory: 'infraestructure/cdk.out',
       })
