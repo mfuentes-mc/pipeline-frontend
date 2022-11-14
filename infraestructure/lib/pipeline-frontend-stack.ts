@@ -24,7 +24,8 @@ export class PipelineFrontendStack extends cdk.Stack {
           'cd infraestructure',
           'npm ci',
           'npm run build',
-          'npx cdk synth'
+          'npx cdk synth',
+          'ls'
         ]
       })
     });
