@@ -26,7 +26,8 @@ export class PipelineFrontendStack extends cdk.Stack {
           'npm run build',
           'npx cdk synth',
           'ls'
-        ]
+        ],
+        primaryOutputDirectory: 'infraestructure/cdk.out',
       })
     });
     for (const option of props?.options.stageOptions ?? []) {
