@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import {Button, Form, Row, Col, Alert} from 'react-bootstrap'
 import useCategorias from '../hooks/useCategorias';
+import useCupones from '../hooks/useCupones';
 
 const Formulario = () => {
 
@@ -10,6 +11,7 @@ const Formulario = () => {
     });
     const [alerta, setAlerta]=useState('');
     const {categorias} = useCategorias();
+    const {consultarCupones} = useCupones();
 
     const handleSubmit = e=>{
         e.preventDefault();
@@ -17,13 +19,16 @@ const Formulario = () => {
             setAlerta('Todos los campos son obligatorios');
             return 
         }
+        setAlerta('')
+        console.log("Paso por aqui");
+        consultarCupones(busqueda)
     }
 
   return (
     <Form
         onSubmit={handleSubmit}
     >
-        {alerta && <Alert>{alerta}</Alert>}
+        {alerta && <Alert variant='danger' className='text-center'>{alerta}</Alert>}
         <Row>
             <Col md={6}>
                 <Form.Group className="mb-3">
