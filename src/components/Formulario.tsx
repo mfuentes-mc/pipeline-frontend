@@ -5,9 +5,10 @@ const Formulario = () => {
         <Row>
             <Col md={6}>
                 <Form.Group className="mb-3">
-                    <Form.Label>Nombre Cupon</Form.Label>
+                    <Form.Label htmlFor='nombre'>Nombre Cupon</Form.Label>
 
                     <Form.Control
+                        id="nombre"
                         type="text"
                         placeholder='Ej: Restaurante, Gimnasio, Farmacia'
                         name="nombre"
@@ -15,7 +16,12 @@ const Formulario = () => {
                 </Form.Group>
             </Col>
             <Col md={6}>
-                2
+            <Form.Group className="mb-3">
+                    <Form.Label htmlFor='nombre'>Categoria</Form.Label>
+                    <Form.Select>
+                        <option>- Selecciona una Categoria -</option>
+                    </Form.Select>
+                </Form.Group>
             </Col>
         </Row>
     </Form>
