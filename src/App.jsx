@@ -13,7 +13,7 @@ function App() {
       <CuponesProvider>
         <header className="py-5">
           <img src={futuraTvLogo} className="logo" alt="Vite logo" />
-          <h1>CUPONERA FUTURA TV</h1>
+          <h1>CUPONERA FUTURA TV 1</h1>
         </header>
         <Container className='mt-5'>
           <Formulario />

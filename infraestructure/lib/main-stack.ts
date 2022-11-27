@@ -28,6 +28,7 @@ export class MainStack extends cdk.Stack {
             sources: [Source.asset("../dist")],
             destinationBucket: bucket
         });
+        console.log("SRC OBJECT",src);
         new CfnOutput(this, 'FrontendAppS3Url', {
             value: bucket.bucketWebsiteUrl
         });
